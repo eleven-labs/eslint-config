@@ -1,0 +1,28 @@
+{
+  "name": "@elevenlabs/eslint-config",
+  "version": "0.0.1",
+  "description": "ESLint and Prettier config for Eleven Labs",
+  "main": "index.js",
+  "repository": "https://github.com/fpasquet/eslint-config.git",
+  "author": "Eleven Labs <contact@eleven-labs.com>",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "lint",
+    "prettier"
+  ],
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "@babel/eslint-parser": "^7.18.9"
+  },
+  "peerDependencies": {
+    "eslint": ">= 8",
+    "prettier": ">= 2"
+  }
+}
