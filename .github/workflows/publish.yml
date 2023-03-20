@@ -4,7 +4,7 @@ on:
     branches:
       - master
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -14,10 +14,8 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: Install modules
-        run: yarn
       - name: Publish
-        run: yarn publish-eslint-config-react
+        run: npm run publish-eslint-config-react
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          continue-on-error: true
+        continue-on-error: true
