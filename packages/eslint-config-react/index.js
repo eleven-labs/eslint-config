@@ -10,7 +10,7 @@ module.exports = {
     "plugin:import/typescript",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "react-app",
+    "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
     "prettier"
   ],
@@ -21,6 +21,7 @@ module.exports = {
   },
   "plugins": [
     "react",
+    "jsx-a11y",
     "autofix"
   ],
   "rules": {
