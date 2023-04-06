@@ -67,7 +67,9 @@ module.exports = {
     }],
     "no-restricted-imports": ["error", {
       "patterns": ["../"]
-    }]
+    }],
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-floating-promises": "off"
   },
   "settings": {
     "react": {
@@ -77,5 +79,13 @@ module.exports = {
       "typescript": true,
       "node": true
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.stories.tsx", "*.test.ts", "*.spec.ts"],
+      "rules": {
+        "@typescript-eslint/consistent-type-assertions": "off"
+      }
+    }
+  ],
 }
