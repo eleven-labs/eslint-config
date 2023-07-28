@@ -4,6 +4,7 @@
   "description": "Shared ESLint config TypeScript for project",
   "main": "index.js",
   "repository": {
+    "type": "git",
     "url": "https://github.com/eleven-labs/eslint-config",
     "directory": "packages/eslint-config-typescript"
   },
@@ -11,7 +12,8 @@
   "license": "MIT",
   "keywords": [
     "eslint",
-    "lint"
+    "lint",
+    "typescript"
   ],
   "publishConfig": {
     "access": "public"

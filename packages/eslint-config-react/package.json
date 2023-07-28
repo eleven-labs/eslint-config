@@ -1,11 +1,12 @@
 {
   "name": "@eleven-labs/eslint-config-react",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "Shared ESLint and Prettier config for React TypeScript project",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eleven-labs/eslint-config"
+    "url": "https://github.com/eleven-labs/eslint-config",
+    "directory": "packages/eslint-config-react"
   },
   "author": "Eleven Labs <contact@eleven-labs.com>",
   "license": "MIT",
@@ -13,57 +14,25 @@
     "eslint",
     "lint",
     "prettier",
+    "typescript",
     "react"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "peerDependencies": {
-    "eslint": "^8.36.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-config-standard-with-typescript": "^34.0.1",
-    "eslint-import-resolver-typescript": "^3.5.3",
-    "eslint-plugin-autofix": "^1.1.0",
-    "eslint-plugin-import": "^2.27.5",
+  "dependencies": {
+    "@eleven-labs/eslint-config-typescript": "^1.0.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^2.8.7"
+    "eslint-plugin-react-hooks": "^4.6.0"
   },
-  "peerDependenciesMeta": {
-    "eslint": {
-      "optional": false
-    },
-    "eslint-config-prettier": {
-      "optional": false
-    },
-    "eslint-config-standard-with-typescript": {
-      "optional": false
-    },
-    "eslint-import-resolver-typescript": {
-      "optional": false
-    },
-    "eslint-plugin-autofix": {
-      "optional": false
-    },
-    "eslint-plugin-import": {
-      "optional": false
-    },
-    "eslint-plugin-jsx-a11y": {
-      "optional": false
-    },
-    "eslint-plugin-prettier": {
-      "optional": false
-    },
-    "eslint-plugin-react": {
-      "optional": false
-    },
-    "eslint-plugin-react-hooks": {
-      "optional": false
-    },
-    "prettier": {
-      "optional": false
-    }
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0",
+    "typescript": "^4.9.5"
   }
 }
