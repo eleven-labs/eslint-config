@@ -14,10 +14,13 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: Publish
-        run: |
-          npm run publish-eslint-config-react
-          npm run publish-eslint-config-typescript
+      - name: Publish Eslint Config TypeScript
+        run: npm run publish-eslint-config-typescript
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        continue-on-error: true
+      - name: Publish ESLint Config React
+        run: npm run publish-eslint-config-react
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         continue-on-error: true
