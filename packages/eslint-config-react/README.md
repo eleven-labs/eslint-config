@@ -2,17 +2,18 @@
 Shared ESLint and Prettier configuration for React TypeScript project
 
 ## Integrate into new project
- 
-Install this package as devDependency and peer dependencies of this package in your project as devDependencies.
+
+Install this package with NPM:
 
 ```sh
-npx install-peerdeps --dev @eleven-labs/eslint-config-react
-npx install-peerdeps --dev eslint-config-standard-with-typescript
+npm install --save-dev @eleven-labs/eslint-config-react eslint prettier typescript
 ```
 
-> To install peer dependencies automatically, use the tool [install-peerdeps](https://github.com/nathanhleung/install-peerdeps).
+Install this package with Yarn:
 
-Instead, you can do this manually my adding all entries part of the peerDependencies property (see  `package.json`).
+```sh
+yarn add -D @eleven-labs/eslint-config-react eslint prettier typescript
+```
 
 Use ESLint config in your project
 
@@ -27,7 +28,22 @@ Create a `.eslintrc` file in project root with the following content:
 }
 ```
 
-Add `.editorconfig` to project:
+Add `.prettierrc` to project:
+```
+{
+  "singleQuote": true,
+  "jsxSingleQuote": false,
+  "semi": true,
+  "tabWidth": 2,
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "always",
+  "trailingComma": "es5",
+  "printWidth": 120
+}
+```
+
+And add `.editorconfig` to project:
 ```
 root = true
 
