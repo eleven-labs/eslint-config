@@ -17,6 +17,7 @@
     "packages/*"
   ],
   "scripts": {
-    "publish-eslint-config-react": "npm publish --workspace @eleven-labs/eslint-config-react"
+    "publish-eslint-config-react": "npm publish --workspace @eleven-labs/eslint-config-react",
+    "publish-eslint-config-typescript": "npm publish --workspace @eleven-labs/eslint-config-typescript"
   }
 }
