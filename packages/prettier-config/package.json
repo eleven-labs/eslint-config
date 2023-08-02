@@ -1,0 +1,25 @@
+{
+  "name": "@eleven-labs/prettier-config",
+  "version": "1.0.0",
+  "description": "Shared Prettier config for project",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eleven-labs/eslint-config",
+    "directory": "packages/prettier-config"
+  },
+  "author": "Eleven Labs <contact@eleven-labs.com>",
+  "license": "MIT",
+  "keywords": [
+    "prettier"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  },
+  "peerDependencies": {
+    "prettier": "^3.0.0"
+  }
+}
