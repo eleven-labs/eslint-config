@@ -14,6 +14,11 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
+      - name: Publish Prettier Config
+        run: npm run publish-prettier-config
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        continue-on-error: true
       - name: Publish Eslint Config TypeScript
         run: npm run publish-eslint-config-typescript
         env:
