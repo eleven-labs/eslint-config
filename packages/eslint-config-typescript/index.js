@@ -37,26 +37,30 @@ module.exports = {
       }
     ],
     'no-restricted-imports': ['error', {
-      "patterns": ['../']
+      'patterns': ['../']
     }],
+    'unicorn/no-null': 'off',
+    'unicorn/no-array-reduce': 'off',
+    'unicorn/no-thenable': 'off',
     'unicorn/prevent-abbreviations': [
       'error',
       {
         'replacements': {
-          "env": false,
-          "props": false
+          'env': false,
+          'props': false
         },
         'ignore': [
           '\\.e2e'
         ]
       }
     ],
-    "unicorn/filename-case": [
-      "error",
+    'unicorn/filename-case': [
+      'error',
       {
-        "cases": {
-          "camelCase": true,
-          "pascalCase": true
+        'cases': {
+          'camelCase': true,
+          'pascalCase': true,
+          'kebabCase': true
         }
       }
     ],
