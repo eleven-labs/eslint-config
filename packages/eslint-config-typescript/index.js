@@ -1,14 +1,8 @@
 module.exports = {
-  env: {
-    'browser': true,
-    'es2021': true,
-    'node': true
-  },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:unicorn/recommended',
-    'plugin:perfectionist/recommended-natural',
     'plugin:prettier/recommended',
     'prettier',
   ],
@@ -18,9 +12,9 @@ module.exports = {
     'autofix'
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
+    project: 'tsconfig.json',
+    tsconfigRootDir: __dirname,
     sourceType: 'module',
-    project: ['./tsconfig.json']
   },
   rules: {
     '@typescript-eslint/no-unused-vars': [
@@ -33,7 +27,7 @@ module.exports = {
     'arrow-body-style': ['error', 'as-needed'],
     '@typescript-eslint/consistent-type-imports': [
       'error', {
-       'prefer': 'type-imports'
+       prefer: 'type-imports'
       }
     ],
     'no-restricted-imports': ['error', {
@@ -42,28 +36,15 @@ module.exports = {
     'unicorn/no-null': 'off',
     'unicorn/no-array-reduce': 'off',
     'unicorn/no-thenable': 'off',
-    'unicorn/prevent-abbreviations': [
-      'error',
-      {
-        'replacements': {
-          'env': false,
-          'props': false
-        },
-        'ignore': [
-          '\\.e2e'
-        ]
+    'unicorn/prevent-abbreviations': ['error', {
+      'replacements': {
+        args: false,
+        arg: false,
+        env: false,
+        dev: false,
+        prod: false,
       }
-    ],
-    'unicorn/filename-case': [
-      'error',
-      {
-        'cases': {
-          'camelCase': true,
-          'pascalCase': true,
-          'kebabCase': true
-        }
-      }
-    ],
+    }],
     'perfectionist/sort-imports': [
       'error',
       {
@@ -79,6 +60,49 @@ module.exports = {
         ],
         'internal-pattern': ['@/**'],
       }
-    ]
+    ],
+    'perfectionist/sort-named-imports': [
+      'error',
+      {
+        type: 'natural',
+        order: 'asc'
+      }
+    ],
+    'perfectionist/sort-named-exports': [
+      'error',
+      {
+        type: 'natural',
+        order: 'asc'
+      }
+    ],
+    'perfectionist/sort-exports': [
+      'error',
+      {
+        type: 'natural',
+        order: 'asc'
+      }
+    ],
+    'perfectionist/sort-classes': [
+      'error',
+      {
+        type: 'natural',
+        order: 'asc',
+        groups: [
+          'index-signature',
+          'static-property',
+          'property',
+          'private-property',
+          'constructor',
+          ['get-method', 'set-method'],
+          'method',
+          'static-private-method',
+          'private-method',
+        ]
+      }
+    ],
+    'complexity': ['error', { 'max':  15 }],
+    'max-params': ['error', 3],
+    'max-nested-callbacks': ['error', 3],
+    'max-depth': ['error', 3]
   }
 }
