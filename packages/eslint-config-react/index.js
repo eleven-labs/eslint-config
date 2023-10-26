@@ -1,17 +1,26 @@
 module.exports = {
-  "extends": [
-    "@eleven-labs/eslint-config-typescript",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended",
+  extends: [
+    '@eleven-labs/eslint-config-typescript',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:jsx-a11y/recommended',
   ],
-  "plugins": [
-    "react",
-    "jsx-a11y"
+  plugins: [
+    'react',
+    'jsx-a11y'
   ],
-  "settings": {
-    "react": {
-      "version": "detect"
+  settings: {
+    react: {
+      version: 'detect'
     }
+  },
+  rules: {
+    'unicorn/prevent-abbreviations': ['error', {
+      replacements: {
+        prop: false,
+        props: false,
+        ref: false
+      }
+    }],
   }
 }
