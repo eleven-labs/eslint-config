@@ -6,13 +6,13 @@ Shared Prettier configuration for project
 Install this package with NPM:
 
 ```sh
-npm install --save-dev @eleven-labs/prettier-config
+npm install --save-dev prettier @eleven-labs/prettier-config
 ```
 
 Install this package with Yarn:
 
 ```sh
-yarn add -D @eleven-labs/prettier-config
+yarn add -D prettier @eleven-labs/prettier-config
 ```
 
 Use Prettier config in your project

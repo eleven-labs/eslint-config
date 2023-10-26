@@ -1,0 +1,45 @@
+{
+  "name": "@eleven-labs/eslint-config",
+  "version": "1.0.0",
+  "description": "Shared ESLint config for project",
+  "main": "index.js",
+  "files": [
+    "base.js",
+    "typescript.js",
+    "react.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eleven-labs/eslint-config",
+    "directory": "packages/eslint-config"
+  },
+  "author": "Eleven Labs <contact@eleven-labs.com>",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "lint",
+    "typescript"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-autofix": "^1.1.0",
+    "eslint-plugin-perfectionist": "^2.2.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-unicorn": "^48.0.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "prettier": "^3.0.3"
+  },
+  "peerDependencies": {
+    "eslint": "^8.0.0"
+  }
+}

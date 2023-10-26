@@ -1,38 +1,29 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:unicorn/recommended',
     'plugin:prettier/recommended',
     'prettier',
   ],
   plugins: [
-    '@typescript-eslint',
     'perfectionist',
     'autofix'
   ],
-  parserOptions: {
-    project: 'tsconfig.json',
-    tsconfigRootDir: __dirname,
-    sourceType: 'module',
-  },
   rules: {
-    '@typescript-eslint/no-unused-vars': [
-      'error', {
-        argsIgnorePattern: '^_',
-        destructuredArrayIgnorePattern: '^_',
-        ignoreRestSiblings: true
-      }
-    ],
     'arrow-body-style': ['error', 'as-needed'],
-    '@typescript-eslint/consistent-type-imports': [
-      'error', {
-       prefer: 'type-imports'
-      }
-    ],
     'no-restricted-imports': ['error', {
       'patterns': ['../']
     }],
+    'unicorn/filename-case': [
+      'error',
+      {
+        cases: {
+          pascalCase: true,
+          camelCase: true,
+          kebabCase: true,
+        }
+      }
+    ],
     'unicorn/no-null': 'off',
     'unicorn/no-array-reduce': 'off',
     'unicorn/no-thenable': 'off',
